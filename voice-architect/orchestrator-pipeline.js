@@ -1,11 +1,11 @@
 require('dotenv').config();
 const axios = require('axios');
-const OpenAI = require('openai');
-const FormData = require('form-data');
+const Groq = require('groq-sdk');
 const { publishToGitHub } = require('./github-publisher');
 const { sendWhatsAppMessage } = require('./whatsapp-notifier');
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Groq es 100% gratuito — regístrate en console.groq.com
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 // -------------------------------------------------------
 // Pipeline principal
@@ -91,23 +91,15 @@ async function transcribeAudio(audioData) {
     throw new Error('No se pudo obtener el audio del mensaje');
   }
 
-  // Crear FormData para enviar a Whisper
-  const form = new FormData();
-  form.append('file', audioBuffer, {
-    filename: 'audio.ogg',
-    contentType: 'audio/ogg',
-  });
-  form.append('model', 'whisper-1');
-  form.append('language', 'es');
-  form.append('response_format', 'text');
-
-  const response = await openai.audio.transcriptions.create({
+  // Usar Groq Whisper (gratuito)
+  const transcription = await groq.audio.transcriptions.create({
     file: new File([audioBuffer], 'audio.ogg', { type: 'audio/ogg' }),
-    model: 'whisper-1',
+    model: 'whisper-large-v3',
     language: 'es',
+    response_format: 'text',
   });
 
-  return response.trim();
+  return transcription.trim();
 }
 
 // -------------------------------------------------------
@@ -135,8 +127,9 @@ Responde SOLO con JSON válido con esta estructura exacta:
   "targetUser": "A quién va dirigido"
 }`;
 
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+  // llama-3.3-70b-versatile es gratuito en Groq
+  const completion = await groq.chat.completions.create({
+    model: 'llama-3.3-70b-versatile',
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.4,
     response_format: { type: 'json_object' },
@@ -168,8 +161,8 @@ Para config.yaml usa el formato YAML con schema, context y rules.
 Para spec_md incluye contexto, escenarios en formato Gherkin y contratos de API.
 Para proposal_md incluye el problema, la solución propuesta, módulos afectados y plan de rollback.`;
 
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+  const completion = await groq.chat.completions.create({
+    model: 'llama-3.3-70b-versatile',
     messages: [{ role: 'user', content: sddPrompt }],
     temperature: 0.3,
     response_format: { type: 'json_object' },
