@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User Activity Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <!-- Mobile Container (Simulating iOS Viewport) -->
+    <div
+        class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-6 pb-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+                        <img alt="User Profile" class="w-full h-full object-cover"
+                            data-alt="Professional male user profile picture avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2O1KRdfIANVoceW1mUyTLeM20-QywbGAJ9csYGSfp9WkIiMQdQkMHWvorwqbCqQkJlk2GhsnPTF5PncaZjsmWfdR2R7dL4b_KAYr1dsGfcn7vIkfMBFTPutEDYw85nsvuu7gqP5peeDl4B6TGK5hAzUlCV143iyFw3MJw0QuHJ9k4ToUEhfFqPvML3CBVXPlEJu2BVxTzwsHmb8giLwpFAtt5NIDMTH_rRyZ3dZZmHwnpSwrrgstb4DsqgZAdisferU_DJJEFYkA" />
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Welcome back,</p>
+                        <h1 class="text-lg font-bold leading-tight">Alex Rivera</h1>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        <span class="material-symbols-outlined text-[22px]">notifications</span>
+                    </button>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        <span class="material-symbols-outlined text-[22px]">settings</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Summary Stats Carousel -->
+        <section class="px-4 py-4">
+            <div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+                <div
+                    class="flex min-w-[160px] flex-col gap-2 rounded-xl p-5 bg-primary text-white shadow-lg shadow-primary/20">
+                    <div class="flex items-center justify-between">
+                        <span class="material-symbols-outlined text-white/80">gavel</span>
+                        <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded-full uppercase">Live</span>
+                    </div>
+                    <p class="text-white/80 text-xs font-medium uppercase tracking-wider">Total Bids</p>
+                    <div class="flex items-baseline gap-2">
+                        <p class="text-2xl font-extrabold">12</p>
+                        <p class="text-white/70 text-xs font-bold">+2 new</p>
+                    </div>
+                </div>
+                <div
+                    class="flex min-w-[160px] flex-col gap-2 rounded-xl p-5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="material-symbols-outlined text-primary">emoji_events</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Items Won
+                    </p>
+                    <div class="flex items-baseline gap-2">
+                        <p class="text-2xl font-extrabold">5</p>
+                        <p class="text-emerald-500 text-xs font-bold">+1</p>
+                    </div>
+                </div>
+                <div
+                    class="flex min-w-[160px] flex-col gap-2 rounded-xl p-5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="material-symbols-outlined text-primary">payments</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Spent</p>
+                    <div class="flex items-baseline gap-2">
+                        <p class="text-2xl font-extrabold">$1,240</p>
+                        <p class="text-rose-500 text-xs font-bold">-$150</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Segmented Control Tabs -->
+        <nav class="px-4 sticky top-[72px] z-10 bg-background-light dark:bg-background-dark py-2">
+            <div
+                class="flex bg-slate-200/50 dark:bg-slate-800/50 p-1 rounded-xl backdrop-blur-sm border border-slate-200 dark:border-slate-700">
+                <button
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all bg-white dark:bg-slate-700 text-primary shadow-sm">
+                    Bidding
+                </button>
+                <button
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+                    Won
+                </button>
+                <button
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+                    Selling
+                </button>
+                <button
+                    class="flex-1 py-2 text-xs font-bold rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+                    Watchlist
+                </button>
+            </div>
+        </nav>
+        <!-- Active Bids List -->
+        <main class="flex-1 px-4 py-4 space-y-4 pb-24">
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-lg font-bold tracking-tight">Active Bids (3)</h3>
+                <button class="text-primary text-xs font-bold flex items-center gap-1">
+                    Sort <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+            </div>
+            <!-- Auction Item Card 1 (Winning) -->
+            <div
+                class="group relative flex gap-4 p-3 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="absolute top-0 left-0 h-full w-1 bg-emerald-500"></div>
+                <div class="relative size-24 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700">
+                    <img alt="Product" class="w-full h-full object-cover"
+                        data-alt="Modern minimalist white wrist watch on grey background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykHF1DL_lOHzseuJLxsvBssWHbKK27TGYEyI7ZAh5L-twHrZ3VMxoptM6oHK8k-nNmjEJwYrAU7UEi3HsCWdc4j3w-lS5uCLsMQfXtWNwLhNFWN-72_AIv4sTVZVR4AY5CwuUrtJKAosvweYE0cxPh3J7h9B2nl3QpzXV6nUzYIJyd2QNMgXDOz8AUO5bz78sAXP8jmwu2gNnLWWPkNtMMFV0X721mLxL-ZvnKEZUZ1n6lrghP7v-U2EU2foudcCThO9zYm3rYvs" />
+                    <div
+                        class="absolute bottom-1 right-1 bg-emerald-500 text-[10px] font-bold text-white px-1.5 py-0.5 rounded shadow-sm">
+                        WINNING
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                    <div>
+                        <h4 class="font-bold text-sm truncate">Premium Minimalist Watch</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Ends in: <span
+                                class="text-slate-800 dark:text-slate-200 font-semibold">02h 14m 05s</span></p>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Current Bid</p>
+                            <p class="text-lg font-extrabold text-primary">$425.00</p>
+                        </div>
+                        <button
+                            class="px-3 py-1.5 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white text-slate-700 dark:text-slate-200 rounded-lg text-xs font-bold transition-colors">
+                            Increase
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Auction Item Card 2 (Outbid) -->
+            <div
+                class="group relative flex gap-4 p-3 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="absolute top-0 left-0 h-full w-1 bg-rose-500"></div>
+                <div class="relative size-24 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700">
+                    <img alt="Product" class="w-full h-full object-cover grayscale-[0.5]"
+                        data-alt="Red Nike running shoe studio shot"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKZHGVhzXIQOlTUI4_YGpWaBshkqkZfiQH9riU95-jkDbcJXMJrfIc00l8hd3nGgUTwjijTmsdyipeW0jhBLJzTL4ETic1HexQh9GqxlVeqHEvkzCAmP31aPMrAcopQPNRb4Cim22Zy_eQvZ3m6BToDPssE-0HCh5_0CDK2XCIDkenWwmt0u1Bo754aso7FrSKEGdAVh5mepJRZmCkhCGktICquG1KH6bzwwdKMkD9etZQ8ZBpigYCHJIvEFn8amJCjS-p67gT8iI" />
+                    <div
+                        class="absolute bottom-1 right-1 bg-rose-500 text-[10px] font-bold text-white px-1.5 py-0.5 rounded shadow-sm">
+                        OUTBID
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                    <div>
+                        <h4 class="font-bold text-sm truncate">Air Max Crimson Special</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Ends in: <span
+                                class="text-slate-800 dark:text-slate-200 font-semibold">44m 12s</span></p>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Highest Bid</p>
+                            <p class="text-lg font-extrabold text-rose-500">$189.50</p>
+                        </div>
+                        <button
+                            class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-bold shadow-md shadow-primary/20">
+                            Bid $195
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Auction Item Card 3 (Watching/Active) -->
+            <div
+                class="group relative flex gap-4 p-3 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="absolute top-0 left-0 h-full w-1 bg-slate-300 dark:bg-slate-600"></div>
+                <div class="relative size-24 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700">
+                    <img alt="Product" class="w-full h-full object-cover"
+                        data-alt="Modern high-end headphones on wooden background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSNU9EVqwBJN7_JnpEXAFp56CQ9U0INdxsWYFv-NdUsPtz8hyiRz1iCPLcgdiOy8aQuyYntqSIy84IDaj4XbbNxQ2yjN-cw3In2G9CxCTINlMKv0psjj3u-rNYO2vuQ6PqnNY70A2XiFaFppvyRN5BS-zI3kqX1BZE8lwKpV6I4M1XNJqeu36eFOOo4Ghp-lxTNek4XaS0qBaffii99_btXb3bO5A7YdinwDcfpwfb0NE-bpBCZcK8_Kr8xx0Gf7IxfWQBLQu5sQ" />
+                    <div
+                        class="absolute bottom-1 right-1 bg-slate-800/80 text-[10px] font-bold text-white px-1.5 py-0.5 rounded shadow-sm">
+                        BIDDING
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0">
+                    <div>
+                        <h4 class="font-bold text-sm truncate">Wireless Noise-Cancelling Headphones</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Ends in: <span
+                                class="text-slate-800 dark:text-slate-200 font-semibold">1d 04h</span></p>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Your Bid</p>
+                            <p class="text-lg font-extrabold">$210.00</p>
+                        </div>
+                        <button
+                            class="px-3 py-1.5 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-xs font-bold transition-colors">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Empty State Suggestion (Hidden by default, shown when no items) -->
+            <div class="hidden flex flex-col items-center justify-center py-12 text-center">
+                <div class="size-20 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-4xl text-slate-400">shopping_cart_off</span>
+                </div>
+                <h4 class="font-bold text-lg">No active bids</h4>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-[240px]">You aren't bidding on anything
+                    yet. Start exploring live auctions!</p>
+                <button class="mt-6 px-6 py-2.5 bg-primary text-white rounded-xl font-bold text-sm">
+                    Browse Auctions
+                </button>
+            </div>
+        </main>
+        <!-- Bottom Navigation Bar -->
+        <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-30">
+            <!-- iOS Safe Area Spacer & Background -->
+            <div
+                class="flex items-center justify-around bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-2 pt-2 pb-6">
+                <a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400 dark:text-slate-500"
+                    href="index.html">
+                    <span class="material-symbols-outlined text-[26px]">home</span>
+                    <p class="text-[10px] font-bold">Home</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400 dark:text-slate-500"
+                    href="explore.html">
+                    <span class="material-symbols-outlined text-[26px]">search</span>
+                    <p class="text-[10px] font-bold">Search</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 flex-1 text-primary" href="dashboard.html">
+                    <span class="material-symbols-outlined text-[28px] fill-[1]">dashboard</span>
+                    <p class="text-[10px] font-bold">Dashboard</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400 dark:text-slate-500"
+                    href="dashboard.html">
+                    <span class="material-symbols-outlined text-[26px]">favorite</span>
+                    <p class="text-[10px] font-bold">Watchlist</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400 dark:text-slate-500"
+                    href="dashboard.html">
+                    <span class="material-symbols-outlined text-[26px]">person</span>
+                    <p class="text-[10px] font-bold">Profile</p>
+                </a>
+            </div>
+            <!-- List Item FAB -->
+            <button
+                class="absolute -top-6 right-6 size-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center ring-4 ring-background-light dark:ring-background-dark active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-3xl">add</span>
+            </button>
+        </div>
+        <!-- iOS Home Indicator Sim -->
+        <div
+            class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full z-40 opacity-50">
+        </div>
+    </div>
+</body>
+
+</html>

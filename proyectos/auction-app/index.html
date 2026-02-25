@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auction Home Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "accent-gold": "#d4af37",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1c2433",
+                        "card-dark": "#282e39",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<div>
+<h1 class="text-lg font-extrabold tracking-tight leading-none">BidSphere</h1>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Premium Auctions</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="relative p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-background-dark"></span>
+</button>
+<div class="size-9 rounded-full overflow-hidden border-2 border-primary/30">
+<img class="w-full h-full object-cover" data-alt="User profile avatar with professional look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0HX5DPHDOWMC3FbJBX5UOeHuy2pnibesB5sCjZgtMLv1t2QH8Hity7tZil3pdd-Se9LEHve8j9heepz8U5e9pp7fjPiasiyt0AFzrr_7OlMvJNlx3WezhzGig4qfsexy_nWPovhasGGkcRNUxVgJ1yScHnEImca6paR5h7oFd9EaI0AZ1G0mTLq8abNcfpjPvBd9yHYYFAzj-Hht7BueXVngI1VAaGQ74QsMZBOLyiczM7QMAVTOnzrO169et5p0ouzzL8KR2kNU"/>
+</div>
+</div>
+</header>
+<main class="pb-24">
+<!-- Search Section -->
+<section class="px-4 py-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">search</span>
+</div>
+<input class="block w-full pl-10 pr-12 py-3 bg-white dark:bg-surface-dark border-none rounded-xl text-sm focus:ring-2 focus:ring-primary shadow-sm dark:shadow-none placeholder:text-slate-500 dark:placeholder:text-slate-400" placeholder="Search for Art, Watches, Tech..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+<button class="p-1.5 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Categories Chips -->
+<section class="px-4 mb-6">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+<button class="flex-none px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">grid_view</span> All
+                </button>
+<button class="flex-none px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-accent-gold">brush</span> Art
+                </button>
+<button class="flex-none px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-blue-400">watch</span> Watches
+                </button>
+<button class="flex-none px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-purple-400">devices</span> Electronics
+                </button>
+<button class="flex-none px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-emerald-400">diamond</span> Luxury
+                </button>
+</div>
+</section>
+<!-- Hero Promo Section -->
+<section class="px-4 mb-8">
+<div class="relative h-56 rounded-2xl overflow-hidden bg-cover bg-center flex items-end p-6 group" data-alt="Modern high-end luxury watch displayed on a textured background" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCt2Ej_NEB5LKOYfn4KiCqq4ShohOwARCY44LmL5btOsprR6uVmtFdPVVoDDUat5Sq36H4mkRkbNZ2xTKc9VUw9BONGuZmv39CviwlqKwzXR9jf4y0epJn4C6bP_TPLxqmX29MxGfpQTvLTDU-D8cAmTkNszOS9SLzIsVjINnEOsIBH1CnwUuHbzJ7s1gl3UqlzZGKe9K3VVCkJvwv8GzOcYB09dUDYWRKMQbDfofcRSY8NH8I0WwxaRg1al79f1VLiNUxcDaNKXQ4')">
+<div class="z-10 w-full">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider animate-pulse">Ending Soon</span>
+<span class="text-xs text-white/80 font-medium">Limited Collection</span>
+</div>
+<h2 class="text-2xl font-black text-white leading-tight mb-3">Discover Rare<br/>Collector Finds</h2>
+<div class="flex items-center justify-between">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/30 transition-all active:scale-95">
+                            Bid Now
+                        </button>
+<div class="flex -space-x-2">
+<div class="size-7 rounded-full border-2 border-black bg-slate-400"></div>
+<div class="size-7 rounded-full border-2 border-black bg-slate-500"></div>
+<div class="size-7 rounded-full border-2 border-black bg-slate-600"></div>
+<div class="flex items-center justify-center size-7 rounded-full border-2 border-black bg-slate-800 text-[10px] font-bold text-white">+12</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Auctions Header -->
+<section class="px-4 mb-4 flex items-center justify-between">
+<h3 class="text-lg font-bold">Featured Auctions</h3>
+<a class="text-sm font-semibold text-primary" href="explore.html">View All</a>
+</section>
+<!-- Auction Grid -->
+<section class="px-4 grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="Abstract modern oil painting with vibrant blue and gold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyyh0wszapaLdLf7p8yD3SIct7ND8JDimlp2eCMOMHaY--yDJJfO7Qd4jKPfskUUXA74ajy1zhXQyxHZZiecTzwM5wbHsmFv8CkEJuwgSw85XvFZOyPvXw5hXFn3FoHlt7rSeQavTp6_GpaCLfH_O9TTKMEDcWUp_oUckOVgA1oT2aOqsY-PH8-cs2viEtjm8M11ULl1ZK1lQCLhGmkKXFugYl3OpuMgCYDqfqJZ22Kp1T1IqwaXBwwyxlNw6sKTOsQjN4Im8kQg"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-md text-white text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-accent-gold">schedule</span> 04h 12m
+                    </div>
+<button class="absolute top-2 left-2 size-7 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1">Fine Art</h4>
+<p class="text-sm font-bold truncate mb-2">Neon Abstract #402</p>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Current Bid</span>
+<div class="flex items-center justify-between">
+<span class="text-base font-extrabold text-primary">$1,240</span>
+<span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">24 Bids</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="Vintage Leica camera in excellent condition on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8tYxgzkRX_zsRT8jlUsaYQu79tdbH_Na-hZjhHKgUi1alNH0ZqXyT1rsJ5cja_7EkZ68SX8V2xDlYm66V_GpZdZDugjX2rdQbWx1ho4wnc_nUTSITeeRYPEuCGjoZYKXwS8_AW-RiFfQ6DQDMunNVx8FYElGehso60OPeyTgblfLc7r_9EE-pk3V0U0s1LglKfZcnCczyFxKLRdyUdo43e0vhkiyPtxYu7sphHgSkQuv2-zKMKJrxuV9frdGIADddxEwKqPVhiPs"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-md text-white text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-accent-gold">schedule</span> 01h 05m
+                    </div>
+<button class="absolute top-2 left-2 size-7 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[18px] fill-current text-red-500">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1">Collectibles</h4>
+<p class="text-sm font-bold truncate mb-2">Vintage Leica M3</p>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Current Bid</span>
+<div class="flex items-center justify-between">
+<span class="text-base font-extrabold text-primary">$3,800</span>
+<span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">12 Bids</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="High-end studio headphones with sleek black and gold finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSym-zEs31mrZzMkCjbj-yzJxFP2x6f7yFQYDvDQm-Mnx-t5lFWb-ycGDSfZr4EoYLrEi3ekwRf_ts6ARpAgpQ4gwdfkf2Mz-q7xTVBVlthfRV41xFAxYxtRVqc8qYzl3imuMIcOw-61Lx0IG_LbMn-w8ak2DUtYHvb6VEQRSG5mu1pdAMaHXo3fqeqASwByoljnjCxSu6GqJSHqRv_Lmk8Ax2GRkqzEoKZ88iay-DyJfZuv6HVKgLQlRsK3hmODjzrmcd9MLxJ0w"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-md text-white text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-accent-gold">schedule</span> 15h 45m
+                    </div>
+<button class="absolute top-2 left-2 size-7 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1">Tech</h4>
+<p class="text-sm font-bold truncate mb-2">Audiophile MK II</p>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Current Bid</span>
+<div class="flex items-center justify-between">
+<span class="text-base font-extrabold text-primary">$450</span>
+<span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">8 Bids</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="Rare limited edition comic book protected in a plastic case" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6FprCthqxxatmQDEwS_RTvb49st1y8Fbc46PvumjTsgaxWLu1md5Xa7XC-pi62HNxOKn-W_8FgCrfrpJd8M6479hvfU_-0gOOfLDMbv43W0TaeHvhCtEZ1fsw_FTKbS6Nyt2Zxvlp2bmf103QT0v_BjMHa3h7e_Hyz2tu3BLfulskMT0pDENRAW2QFpJT6MLboTSU-VzlYX66ydec8jOOH14fcNYtXVt4Wp-wTSD2M3yCO9CKANgNg5V8a3dhdThpAQjql7kwcqY"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-md text-white text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-accent-gold">schedule</span> 02h 20m
+                    </div>
+<button class="absolute top-2 left-2 size-7 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1">Comics</h4>
+<p class="text-sm font-bold truncate mb-2">First Edition Marvel</p>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Current Bid</span>
+<div class="flex items-center justify-between">
+<span class="text-base font-extrabold text-primary">$9,200</span>
+<span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">41 Bids</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seller CTA -->
+<section class="px-4 mt-8">
+<div class="bg-primary/10 dark:bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
+<h3 class="text-lg font-bold mb-2">Want to sell your item?</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">List your item in 3 easy steps and reach thousands of collectors.</p>
+<button class="w-full bg-white dark:bg-surface-dark text-primary border border-primary/20 font-bold py-3 rounded-xl transition-all active:bg-primary active:text-white">
+                    Start Selling Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/90 dark:bg-surface-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe px-6 py-2 z-50">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="index.html">
+<span class="material-symbols-outlined fill-current">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold">Watchlist</span>
+</a>
+<!-- Central Action Button -->
+<div class="relative -top-6">
+<button class="size-14 bg-primary text-white rounded-full shadow-xl shadow-primary/40 flex items-center justify-center border-4 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold">Bids</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

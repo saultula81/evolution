@@ -1,0 +1,261 @@
+:root {
+  --phone-width: 360px;
+  --phone-height: 740px;
+  --phone-radius: 40px;
+  --bezel-color: #1a1a1a;
+  --frame-color: #2a2a2a;
+  --accent-blue: #3b82f6;
+  --android-bg: #000000;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #0f0f12;
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.simulator-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Smartphone Frame */
+.smartphone {
+  width: var(--phone-width);
+  height: var(--phone-height);
+  background: var(--frame-color);
+  border-radius: var(--phone-radius);
+  padding: 12px;
+  position: relative;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 0 2px 2px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.smartphone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--android-bg);
+  border-radius: calc(var(--phone-radius) - 8px);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.notch {
+  width: 120px;
+  height: 25px;
+  background: var(--bezel-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-lens {
+  width: 10px;
+  height: 10px;
+  background: #111;
+  border-radius: 50%;
+  border: 2px solid #222;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.status-bar {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 50;
+  color: #fff;
+}
+
+.status-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.battery-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.navigation-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 50;
+}
+
+.nav-icon {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-icon:hover {
+  color: white;
+}
+
+.content-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.desktop-grid {
+  padding: 40px 20px;
+  height: 100%;
+  background: linear-gradient(135deg, #1e1e2e, #11111b);
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.app-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.app-label {
+  font-size: 11px;
+  color: white;
+}
+
+.app-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* Side Controls */
+.side-controls {
+  width: 300px;
+  padding: 30px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.control-group label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  background: #333;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.toggle.on {
+  background: var(--accent-blue);
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle.on::after {
+  transform: translateX(20px);
+}
+
+.reset-btn {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: #ef4444;
+  color: white;
+}

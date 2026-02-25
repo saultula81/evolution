@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Auction Item Details</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen pb-24">
+    <!-- Header Navigation -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between px-4 h-16">
+            <a class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+                href="explore.html">
+                <span class="material-symbols-outlined">arrow_back_ios_new</span>
+            </a>
+            <h2 class="text-base font-bold tracking-tight">Auction Detail</h2>
+            <div class="flex gap-2">
+                <button
+                    class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">share</span>
+                </button>
+                <button
+                    class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">favorite</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-md mx-auto">
+        <!-- Image Gallery -->
+        <section class="relative group">
+            <div class="aspect-[4/5] w-full overflow-hidden bg-slate-200 dark:bg-slate-800">
+                <img alt="Vintage Luxury Watch" class="w-full h-full object-cover"
+                    data-alt="Close up of a luxury vintage wristwatch with black dial"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9_gJMT9Ip8TMpaNJxl4p1nrCKXcve22tVjQeiIRppcdSS0yzdRrCA2ZtO81tLsNmE9ziNWzMVGFpPZW5NKSRUHBcSwx34W51aQ4Saq-rsQsN8wCJtKlL_ug3ZC5abUXzau_E4nrICaT_9xvdELNV2tQrFBmi3aDCObmgnH9HPl-WYe8VFYQ2a7nTLmy0LUqUGuu5bHXu7_WNkMIo7COOu5USPlgu-CD7i9GmvyGXPkUSt7Csr06xjdjxvZPgCLW_eoy2L6_pnhs" />
+            </div>
+            <!-- Pagination Indicator -->
+            <div
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/30 backdrop-blur-sm">
+                <div class="size-1.5 rounded-full bg-white"></div>
+                <div class="size-1.5 rounded-full bg-white/40"></div>
+                <div class="size-1.5 rounded-full bg-white/40"></div>
+                <div class="size-1.5 rounded-full bg-white/40"></div>
+            </div>
+            <!-- Badge -->
+            <div class="absolute top-4 left-4">
+                <span
+                    class="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Rare
+                    Find</span>
+            </div>
+        </section>
+        <!-- Item Info -->
+        <section class="px-4 pt-6 pb-4">
+            <div class="flex justify-between items-start mb-2">
+                <span class="text-xs font-semibold text-primary uppercase tracking-widest">Horology • Vintage</span>
+                <div class="flex items-center gap-1 text-yellow-500">
+                    <span class="material-symbols-outlined text-sm">star</span>
+                    <span class="text-sm font-bold text-slate-900 dark:text-slate-100">4.9</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-normal">(128)</span>
+                </div>
+            </div>
+            <h1 class="text-2xl font-extrabold leading-tight mb-4">1964 Vintage Rolex Submariner Ref. 5513</h1>
+            <!-- Seller -->
+            <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                <div class="size-10 rounded-full overflow-hidden border-2 border-primary/20">
+                    <img alt="Seller Avatar" class="w-full h-full object-cover"
+                        data-alt="Professional male portrait for seller profile"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh1NfxPpe0Va_HpMBqCM_ehkxtxTZlpgZ72RUZxp7I9gLTNcBnouQ36It58FuRMq714_g8P_dNF-_8xiOb65MFut6BJDbz6ivJ0OBCUCIO2z19JgjKl5RuzVXB1hwMiId1xSG2hV2xEMd-1k2GE5iJUYFtR7AYYzOUkHOFTY0OrakUhE_gDkbKNRDQyemOp9wzAUAkXtqSqp-RDQCTl1A9N40jJz4KdPDUo29oLJQku272s21rz6xLYV8aUMfsCsag2zrOYDJHp3A" />
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-bold">Elite Timepieces Co.</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Verified Professional Dealer</p>
+                </div>
+                <button class="text-primary text-xs font-bold px-3 py-1.5 rounded-lg bg-primary/10">Follow</button>
+            </div>
+        </section>
+        <!-- Countdown & Stats -->
+        <section class="px-4 mb-6 grid grid-cols-2 gap-3">
+            <div
+                class="bg-slate-900 text-white p-4 rounded-xl flex flex-col justify-center items-center text-center border border-white/10">
+                <span class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Auction Ends In</span>
+                <div class="flex gap-2 items-baseline">
+                    <span class="text-xl font-black text-primary italic">02</span>
+                    <span class="text-xs text-slate-500">:</span>
+                    <span class="text-xl font-black text-primary italic">14</span>
+                    <span class="text-xs text-slate-500">:</span>
+                    <span class="text-xl font-black text-primary italic">35</span>
+                </div>
+                <div class="flex gap-4 mt-1 text-[8px] uppercase text-slate-500">
+                    <span>HRS</span>
+                    <span>MIN</span>
+                    <span>SEC</span>
+                </div>
+            </div>
+            <div
+                class="bg-slate-100 dark:bg-slate-900/50 p-4 rounded-xl flex flex-col justify-center items-center text-center border border-slate-200 dark:border-slate-800">
+                <span class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Current Bid</span>
+                <span class="text-2xl font-black">$14,250</span>
+                <span class="text-[10px] text-green-500 font-bold mt-1">Reserve Met</span>
+            </div>
+        </section>
+        <!-- Bid Section -->
+        <section class="px-4 mb-8">
+            <div
+                class="bg-white dark:bg-slate-900 p-5 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold">Place your bid</h3>
+                    <span class="text-xs text-slate-500">Min. Increment: $250</span>
+                </div>
+                <!-- Increment Buttons -->
+                <div class="flex gap-2 mb-4">
+                    <button
+                        class="flex-1 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 hover:text-primary transition-all font-bold text-sm border border-transparent hover:border-primary/30">+$250</button>
+                    <button
+                        class="flex-1 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 hover:text-primary transition-all font-bold text-sm border border-transparent hover:border-primary/30">+$500</button>
+                    <button
+                        class="flex-1 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 hover:text-primary transition-all font-bold text-sm border border-transparent hover:border-primary/30">+$1,000</button>
+                </div>
+                <!-- Custom Input -->
+                <div class="relative mb-4">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
+                    <input
+                        class="w-full pl-8 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-lg font-bold"
+                        placeholder="Enter amount" type="number" />
+                </div>
+                <button
+                    class="w-full bg-primary hover:bg-primary/90 text-white font-extrabold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">gavel</span>
+                    PLACE BID NOW
+                </button>
+            </div>
+        </section>
+        <!-- Bidding History -->
+        <section class="px-4 mb-8">
+            <div class="flex justify-between items-end mb-4 px-1">
+                <h3 class="text-lg font-bold">Bidding History</h3>
+                <span class="text-xs text-primary font-bold">24 Bids Total</span>
+            </div>
+            <div class="space-y-3">
+                <!-- Bidder Item -->
+                <div
+                    class="flex items-center justify-between p-3 rounded-xl bg-background-light dark:bg-slate-900/30 border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                            JD</div>
+                        <div>
+                            <p class="text-sm font-bold">James D.</p>
+                            <p class="text-[10px] text-slate-500 uppercase">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm font-black text-primary">$14,250</p>
+                        <p class="text-[10px] text-slate-500 uppercase italic">Highest</p>
+                    </div>
+                </div>
+                <!-- Bidder Item -->
+                <div class="flex items-center justify-between p-3 rounded-xl opacity-80">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 font-bold text-xs">
+                            SK</div>
+                        <div>
+                            <p class="text-sm font-bold">Sarah K.</p>
+                            <p class="text-[10px] text-slate-500 uppercase">15 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm font-bold">$14,000</p>
+                        <p class="text-[10px] text-slate-500 uppercase">Outbid</p>
+                    </div>
+                </div>
+                <!-- Bidder Item -->
+                <div class="flex items-center justify-between p-3 rounded-xl opacity-60">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 font-bold text-xs">
+                            ML</div>
+                        <div>
+                            <p class="text-sm font-bold">Marcus L.</p>
+                            <p class="text-[10px] text-slate-500 uppercase">1 hour ago</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm font-bold">$13,750</p>
+                        <p class="text-[10px] text-slate-500 uppercase">Outbid</p>
+                    </div>
+                </div>
+            </div>
+            <button class="w-full mt-4 py-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors">View
+                All Bidding History</button>
+        </section>
+        <!-- Description -->
+        <section class="px-4 mb-8">
+            <h3 class="text-lg font-bold mb-3">Description</h3>
+            <div class="prose prose-sm dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p>Up for auction is a magnificent 1964 Rolex Submariner Ref. 5513. This particular example features a
+                    stunning "Gilt" dial with naturally aged luminous markers that have developed a beautiful pumpkin
+                    patina.</p>
+                <p class="mt-2">The case remains thick with well-defined lugs, suggesting it has been sparingly polished
+                    over its nearly 60-year lifespan. Fitted on its original period-correct rivet bracelet.</p>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-4">
+                <div class="border-l-2 border-primary/30 pl-3">
+                    <p class="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Case Size</p>
+                    <p class="text-sm font-bold">40mm</p>
+                </div>
+                <div class="border-l-2 border-primary/30 pl-3">
+                    <p class="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Movement</p>
+                    <p class="text-sm font-bold">Automatic 1520</p>
+                </div>
+                <div class="border-l-2 border-primary/30 pl-3">
+                    <p class="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Condition</p>
+                    <p class="text-sm font-bold">Excellent Vintage</p>
+                </div>
+                <div class="border-l-2 border-primary/30 pl-3">
+                    <p class="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Box/Papers</p>
+                    <p class="text-sm font-bold">Watch Only</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Navbar (Fixed) -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-50">
+        <div class="flex justify-between items-center max-w-md mx-auto">
+            <a class="flex flex-col items-center gap-1 group" href="index.html">
+                <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">home</span>
+                <span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Home</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group" href="explore.html">
+                <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">search</span>
+                <span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Explore</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 -mt-8" href="dashboard.html">
+                <div
+                    class="size-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/40 ring-4 ring-white dark:ring-background-dark">
+                    <span class="material-symbols-outlined text-3xl">gavel</span>
+                </div>
+                <span class="text-[10px] font-bold text-primary mt-1">My Bids</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group" href="dashboard.html">
+                <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">notifications</span>
+                <span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Alerts</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group" href="dashboard.html">
+                <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">person</span>
+                <span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Profile</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

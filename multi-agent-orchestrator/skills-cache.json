@@ -1,0 +1,119 @@
+{
+  "updated_at": "2026-02-25T01:01:24.774Z",
+  "skills": [
+    {
+      "id": "design-md",
+      "name": "design-md",
+      "description": "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files",
+      "path": "E:\\evolucion\\skills\\design-md\\SKILL.md"
+    },
+    {
+      "id": "enhance-prompt",
+      "name": "enhance-prompt",
+      "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results.",
+      "path": "E:\\evolucion\\skills\\enhance-prompt\\SKILL.md"
+    },
+    {
+      "id": "frontend-design",
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "path": "E:\\evolucion\\skills\\frontend-design\\SKILL.md"
+    },
+    {
+      "id": "juez-consenso",
+      "name": "juez-consenso",
+      "description": "Actúa como el Juez Supremo de Arquitectura. Sintetiza las respuestas de múltiples modelos IA, elige la más precisa y coherente con los estándares de Evolución, y la guarda en la memoria de Engram como \"Verdad de Proyecto\".",
+      "path": "E:\\evolucion\\skills\\juez-consenso\\SKILL.md"
+    },
+    {
+      "id": "react-components",
+      "name": "react:components",
+      "description": "Converts Stitch designs into modular Vite and React components using system-level networking and AST-based validation.",
+      "path": "E:\\evolucion\\skills\\react-components\\SKILL.md"
+    },
+    {
+      "id": "remotion",
+      "name": "remotion",
+      "description": "Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays",
+      "path": "E:\\evolucion\\skills\\remotion\\SKILL.md"
+    },
+    {
+      "id": "sdd-apply",
+      "name": "sdd-apply",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-apply\\SKILL.md"
+    },
+    {
+      "id": "sdd-archive",
+      "name": "sdd-archive",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-archive\\SKILL.md"
+    },
+    {
+      "id": "sdd-design",
+      "name": "sdd-design",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-design\\SKILL.md"
+    },
+    {
+      "id": "sdd-explore",
+      "name": "sdd-explore",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-explore\\SKILL.md"
+    },
+    {
+      "id": "sdd-init",
+      "name": "sdd-init",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-init\\SKILL.md"
+    },
+    {
+      "id": "sdd-propose",
+      "name": "sdd-propose",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-propose\\SKILL.md"
+    },
+    {
+      "id": "sdd-spec",
+      "name": "sdd-spec",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-spec\\SKILL.md"
+    },
+    {
+      "id": "sdd-tasks",
+      "name": "sdd-tasks",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-tasks\\SKILL.md"
+    },
+    {
+      "id": "sdd-verify",
+      "name": "sdd-verify",
+      "description": ">",
+      "path": "E:\\evolucion\\skills\\sdd-verify\\SKILL.md"
+    },
+    {
+      "id": "shadcn-ui",
+      "name": "shadcn-ui",
+      "description": "Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices.",
+      "path": "E:\\evolucion\\skills\\shadcn-ui\\SKILL.md"
+    },
+    {
+      "id": "stitch-loop",
+      "name": "stitch-loop",
+      "description": "Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern",
+      "path": "E:\\evolucion\\skills\\stitch-loop\\SKILL.md"
+    },
+    {
+      "id": "tech-lead",
+      "name": "tech-lead",
+      "description": "Arquitecto y Guardián Técnico. Utiliza Engram para asegurar que el código sigue los estándares innegociables del ecosistema Evolución. Úsalo para validar propuestas, código y decisiones de diseño.",
+      "path": "E:\\evolucion\\skills\\tech-lead\\SKILL.md"
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "path": "E:\\evolucion\\skills\\web-design-guidelines\\SKILL.md"
+    }
+  ]
+}
