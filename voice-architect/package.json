@@ -1,0 +1,19 @@
+{
+  "name": "voice-architect",
+  "version": "1.0.0",
+  "description": "Arquitecto de Software por Voz - Evolution Project #5",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "form-data": "^4.0.1",
+    "openai": "^4.77.3",
+    "simple-git": "^3.27.0"
+  }
+}
